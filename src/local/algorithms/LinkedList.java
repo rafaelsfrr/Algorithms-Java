@@ -12,7 +12,7 @@ public class LinkedList<E> {
         return length;
     }
 
-    // In this implemenatition we add on the first - FILO scheme O(1)
+    // In this implementation we add on the first - FILO scheme O(1)
     public void add(E element) {
         Node nn = new Node();
         nn.setElement(element);
