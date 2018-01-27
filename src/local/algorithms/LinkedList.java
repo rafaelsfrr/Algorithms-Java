@@ -14,7 +14,7 @@ public class LinkedList<E> {
 
     // In this implementation we add on the first - FILO scheme O(1)
     public void add(E element) {
-        Node nn = new Node();
+        Node<E> nn = new Node<>();
         nn.setElement(element);
         nn.setNext(first);
         first = nn;
