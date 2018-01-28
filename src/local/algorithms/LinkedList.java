@@ -73,9 +73,16 @@ public class LinkedList<E> {
             it = it.getNext();
         }
 
-        nodeBefore.setNext(it.getNext());
-        length--;
-        return (E) it.getElement();
+        // first element
+        if(nodeBefore == null) {
+            first = it.getNext();
+            length--;
+            return (E) it.getElement();
+        } else {
+            nodeBefore.setNext(it.getNext());
+            length--;
+            return (E) it.getElement();
+        }
     }
 
 
@@ -102,7 +109,7 @@ public class LinkedList<E> {
         System.out.println("Element: " + list.getByIndex(2));
 
         // Print list without 10
-        list.removeByIndex(2);
+        list.removeByIndex(0);
         System.out.println("Items:");
         it = list.first;
         for(int i = 0; i < list.size(); i++) {
