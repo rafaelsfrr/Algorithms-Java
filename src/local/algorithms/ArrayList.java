@@ -1,52 +1,52 @@
 package local.algorithms;
 
 public class ArrayList<E> {
-    private int capacity = 4;
-    private int length = 0;
-    private E[] array = (E[]) new Object[capacity];
+    private int size = 4;
+    private int nextElementIndex = 0;
+    private E[] array = (E[]) new Object[size];
 
 
     public int size() {
-        return capacity;
+        return nextElementIndex;
     }
 
-    public void add(E elem, int index) {
+    public void add(E elem) {
 
         // Check if the array is full
-        if(length == capacity) {
+        if(nextElementIndex == size) {
             // if it is full, we have to copy all the elements to a new array  - O(size)
-            E[] narray = (E[]) new Object[2 * capacity];
+            E[] narray = (E[]) new Object[2 * size];
 
-            for(int i = 0; i < length; i++) {
+            for(int i = 0; i < size; i++) {
                 narray[i] = array[i];
             }
 
-            narray[index] = elem;
-            capacity = 2 * capacity;
-            length++;
+            narray[size] = elem;
+            size = 2 * size;
+            nextElementIndex++;
             array = narray;
         } else {
             // If it is not, we just add the new number - O(1)
-            array[index] = elem;
-            length++;
+            array[nextElementIndex] = elem;
+            nextElementIndex++;
         }
     }
 
     // We have to allocate another array and copy all items less the item we want to remove
     public void remove(int index) {
-        E[] narray = (E[]) new Object[capacity];
+        E[] narray = (E[]) new Object[size];
 
         // aux is the offset that is valid when we find the element we want to remove
         int aux = 0;
 
-        for(int i = 0; i < capacity; i++) {
+        for(int i = 0; i < size; i++) {
             if(i != index) {
                 narray[i - aux] = array[i];
             } else {
                 aux++;
             }
         }
-        length--;
+        nextElementIndex--;
         array = narray;
     }
 
@@ -57,13 +57,13 @@ public class ArrayList<E> {
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>();
 
-        arr.add(Integer.valueOf(1), Integer.valueOf(0));
-        arr.add(Integer.valueOf(10), Integer.valueOf(1));
-        arr.add(Integer.valueOf(19), Integer.valueOf(2));
-        arr.add(Integer.valueOf(15), Integer.valueOf(3));
+        arr.add(Integer.valueOf(1));
+        arr.add(Integer.valueOf(10));
+        arr.add(Integer.valueOf(19));
+        arr.add(Integer.valueOf(15));
         // O(1) insertion
 
-        arr.add(Integer.valueOf(13), Integer.valueOf(4));
+        arr.add(Integer.valueOf(13));
         // O(N) insertion
 
         // Printing 1 10 19 15 13
