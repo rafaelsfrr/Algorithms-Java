@@ -4,6 +4,6 @@ This is a repository with some algorithms resources like notes and some implemen
 
 ## Data Structures
 
-+[Array List](https://github.com/rafaelsfrr/Algorithms-Java/doc/#array-list)
-+[Linked List]()
-+[Hash Map]()
++ [Array List](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/data-structures.md#array-list)
++ [Linked List](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/data-structures.md#linked-list)
++ [Hash Map](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/data-structures.md#hash-map)

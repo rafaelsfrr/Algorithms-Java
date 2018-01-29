@@ -1,4 +1,4 @@
-### [Array List](src/local/algorithms/ArrayList.java)
+### [Array List](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/ArrayList.java)
 
 An Array List is a simple array with a default size that is dynamically refreshed when items are inserted.
 
@@ -14,7 +14,7 @@ An Array List is a simple array with a default size that is dynamically refreshe
 
 <a name="remove_al_ft">2</a>: We have to create another array and copy all items less the item that will be removed.
 
-### [Linked List](src/local/algorithms/LinkedList.java)
+### [Linked List](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/LinkedList.java)
 
 An Linked List is a structure of data elements that each element has a link to its successor. This implementation is a Singly-Linked List, so each element has only a link to its successor. There is a Doubly-Linked List that each element has a link to its predecessor too.
 
@@ -30,7 +30,7 @@ An Linked List is a structure of data elements that each element has a link to i
 
 <a name="remove_ll_ft">2</a>:  It is O(1) because we remove an element on the first position utilizing a LIFO scheme.
 
-### [Hash Map](src/local/algorithms/HashMap.java)
+### [Hash Map](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/HashMap.java)
 
 A Hash Map is a data structure that maps keys to values. In this implementation, the hash function is a simple `element.key % array.size` operation. The conflict is managed by a Singly-Linked List.
 
