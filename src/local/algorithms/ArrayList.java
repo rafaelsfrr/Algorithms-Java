@@ -1,12 +1,16 @@
 package local.algorithms;
 
+import java.lang.reflect.Array;
+
 public class ArrayList<E> {
     private int size;
     private int nextElementIndex = 0;
-    private E[] array = (E[]) new Object[size];
+    private E[] array;
 
-    public void setSize(int size) {
+
+    public ArrayList(Class<E> clazz, int size) {
         this.size = size;
+        array = (E[]) Array.newInstance(clazz, size);
     }
 
     public int size() {
@@ -64,9 +68,7 @@ public class ArrayList<E> {
     }
 
     public static void main(String[] args) throws Exception {
-        ArrayList<Integer> arr = new ArrayList<>();
-
-        arr.setSize(4);
+        ArrayList<Integer> arr = new ArrayList<>(Integer.class, 4);
 
         arr.add(Integer.valueOf(1));
         arr.add(Integer.valueOf(10));
