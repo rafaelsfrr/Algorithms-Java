@@ -1,10 +1,13 @@
 package local.algorithms;
 
 public class ArrayList<E> {
-    private int size = 4;
+    private int size;
     private int nextElementIndex = 0;
     private E[] array = (E[]) new Object[size];
 
+    public void setSize(int size) {
+        this.size = size;
+    }
 
     public int size() {
         return nextElementIndex;
@@ -62,6 +65,8 @@ public class ArrayList<E> {
 
     public static void main(String[] args) throws Exception {
         ArrayList<Integer> arr = new ArrayList<>();
+
+        arr.setSize(4);
 
         arr.add(Integer.valueOf(1));
         arr.add(Integer.valueOf(10));
