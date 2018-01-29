@@ -21,7 +21,7 @@ public class ArrayList<E> {
                 narray[i] = array[i];
             }
 
-            narray[size] = elem;
+            narray[nextElementIndex] = elem;
             size = 2 * size;
             nextElementIndex++;
             array = narray;
@@ -34,27 +34,33 @@ public class ArrayList<E> {
 
     // We have to allocate another array and copy all items less the item we want to remove
     public void remove(int index) {
-        E[] narray = (E[]) new Object[size];
+        if(index <= nextElementIndex - 1) {
+            E[] narray = (E[]) new Object[size];
 
-        // aux is the offset that is valid when we find the element we want to remove
-        int aux = 0;
+            // aux is the offset that is valid when we find the element we want to remove
+            int aux = 0;
 
-        for(int i = 0; i < size; i++) {
-            if(i != index) {
-                narray[i - aux] = array[i];
-            } else {
-                aux++;
+            for(int i = 0; i < size; i++) {
+                if(i != index) {
+                    narray[i - aux] = array[i];
+                } else {
+                    aux++;
+                }
             }
+            nextElementIndex--;
+            array = narray;
         }
-        nextElementIndex--;
-        array = narray;
     }
 
-    public E getElement(int index) {
-        return array[index];
+    public E getElement(int index) throws Exception {
+        if(index <= nextElementIndex - 1) {
+            return array[index];
+        } else {
+            throw new Exception("Index out of bounds");
+        }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         ArrayList<Integer> arr = new ArrayList<>();
 
         arr.add(Integer.valueOf(1));
