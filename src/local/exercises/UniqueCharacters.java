@@ -1,3 +1,5 @@
+package local.exercises;
+
 public class UniqueCharacters {
 
 
