@@ -1,5 +1,6 @@
 package local.exercises;
 
+// O(N) time, O(1) space
 public class CheckEdit {
     public static boolean checkOneEdit(String a, String b) {
         if(a.length() + 1 == b.length()) {
