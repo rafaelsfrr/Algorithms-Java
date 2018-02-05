@@ -1,4 +1,4 @@
-package local.exercises;
+package local.exercises.strings.src;
 
 // O(N) time, O(1) space
 public class CheckEdit {
@@ -60,16 +60,5 @@ public class CheckEdit {
         }
 
         return true;
-    }
-
-    public static void main(String[] args) {
-        System.out.println("apple " + "appple " +
-                checkOneEdit("apple", "appple"));
-        System.out.println("pple " + "apple " +
-                checkOneEdit("pple", "apple"));
-        System.out.println("aapple " + "apple " +
-                checkOneEdit("aapple", "apple"));
-        System.out.println("aapple " + "aple " +
-                checkOneEdit("aapple", "aple"));
     }
 }

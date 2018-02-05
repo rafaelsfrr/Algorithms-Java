@@ -1,4 +1,4 @@
-package local.exercises;
+package local.exercises.strings.src;
 
 public class Permutation {
 
@@ -26,16 +26,5 @@ public class Permutation {
         }
 
         return true;
-    }
-
-    public static void main(String[] args) {
-        System.out.println("house " +
-                "ouhse " + isPermutation("house", "ouhse"));
-
-        System.out.println("dog " +
-                "cat " + isPermutation("dog", "cat"));
-
-        System.out.println("dog% " +
-                "og%d " + isPermutation("dog%", "og%d"));
     }
 }

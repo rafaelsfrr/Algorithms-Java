@@ -1,4 +1,4 @@
-package local.exercises;
+package local.exercises.strings.src;
 
 public class PalindromePermutation {
 
@@ -52,11 +52,5 @@ public class PalindromePermutation {
         }
 
         return true;
-    }
-
-    public static void main(String[] args) {
-        System.out.println("house " + isPalindrome("house"));
-        System.out.println("arara " + isPalindrome("arara"));
-        System.out.println("aaarr " + isPalindrome("aaarr"));
     }
 }

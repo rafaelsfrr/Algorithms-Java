@@ -1,4 +1,4 @@
-package local.exercises;
+package local.exercises.strings.src;
 
 public class ReplaceSpace {
 
@@ -34,10 +34,5 @@ public class ReplaceSpace {
 
         return String.valueOf(str);
 
-    }
-
-    public static void main(String[] args) {
-        System.out.println("Mr John Smith  " +
-                replaceSpace("Mr John Smith      ", 13));
     }
 }

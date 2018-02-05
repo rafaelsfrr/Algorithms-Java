@@ -1,4 +1,4 @@
-package local.exercises;
+package local.exercises.strings.src;
 
 public class UniqueCharacters {
 
@@ -24,11 +24,5 @@ public class UniqueCharacters {
         }
 
         return true;
-    }
-
-    public static void main(String[] args) {
-        System.out.println(uniqueCharacters("abacate"));
-        System.out.println(uniqueCharacters("qwertyuiakms;"));
-        System.out.println(uniqueCharacters("house"));
     }
 }

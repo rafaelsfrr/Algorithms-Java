@@ -1,4 +1,4 @@
-package local.exercises;
+package local.exercises.strings.src;
 
 public class Compression {
 
@@ -24,12 +24,5 @@ public class Compression {
             return strCompressed.toString();
 
         return str;
-    }
-
-    public static void main(String[] args) {
-        System.out.println("aaccccccca " +
-                compressRepresentation("aaccccccca"));
-        System.out.println("abcdefg " +
-                compressRepresentation("abcdefg"));
     }
 }
