@@ -36,7 +36,7 @@ public class NilMatrix {
             for(int j = 1; j < matrix[0].length; j++) {
                 if(matrix[i][j] == 0) {
                     matrix[i][0] = 0;
-                    matrix[0][i] = 0;
+                    matrix[0][j] = 0;
                 }
             }
         }
@@ -46,27 +46,12 @@ public class NilMatrix {
         }
 
         for(int j = 1; j < matrix[0].length; j++) {
-            if(matrix[0][j] == 0) setRowToZero(matrix, j);
+            if(matrix[0][j] == 0) setColToZero(matrix, j);
         }
 
         if(rowHasZero) setRowToZero(matrix, 0);
         if(colHasZero) setColToZero(matrix, 0);
 
         return matrix;
-    }
-
-    public static void main(String[] args) {
-        int[][] matrix = {{1, 1, 0, 1},
-                          {0, 1, 1, 1},
-                          {1, 1, 1, 1},
-                          {1, 1, 1, 1}};
-        int[][] mat = setToZero(matrix);
-
-        for(int i = 0; i < mat.length; i++) {
-            for(int j = 0; j < mat[0].length; j++) {
-                System.out.print(mat[i][j] + " ");
-            }
-            System.out.println();
-        }
     }
 }
