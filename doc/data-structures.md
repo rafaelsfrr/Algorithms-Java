@@ -34,12 +34,16 @@ An Linked List is a structure of data elements that each element has a link to i
 
 A Hash Map is a data structure that maps keys to values. In this implementation, the hash function is a simple `element.key % array.size` operation. The conflict is managed by a Singly-Linked List.
 
-| Operation  |            Time bound             |
-| :--------: | :-------------------------------: |
-|   Insert   | O(1)                              |
-| Get        | O(1), O(list.size)<sup>[1](#get_hm_ft)</sup>   |
-|   Remove   | O(1), O(list.size)<sup>[1](#remove_hm_ft)</sup> |
+| Operation |                Time bound                |
+| :-------: | :--------------------------------------: |
+|  Insert   |                   O(1)                   |
+|    Get    | O(1), O(list.size)<sup>[1](#get_hm_ft)</sup> |
+|  Remove   | O(1), O(list.size)<sup>[1](#remove_hm_ft)</sup> |
 
 <a name="get_hm_ft">1</a>: It is O(1) when we haven't a conflict. But when we have, we need to search on a Singly-Linked List getting a O(list.size) operation.
 
 <a name="remove_hm_ft">2</a>:  It is O(1) when we haven't a conflict, resulting in a array element excluded. But, when we have, we need to search on a Singly-Linked List getting a O(list.size) operation. 
+
+### [String Builder](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/StringBuilder.java)
+
+A String Builder is a ArrayList that is used as a container to strings characters, thus creating a dynamically string. With this implementation, we can avoid creating a new string each time we want to append a character.
