@@ -21,6 +21,10 @@ public class LinkedList<E> {
         length++;
     }
 
+    public Node<E> getFirstNode() {
+        return first;
+    }
+
     public E getFirstElement() {
         return (E) first.getElement();
     }
