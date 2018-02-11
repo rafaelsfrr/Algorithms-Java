@@ -57,6 +57,17 @@ public class LinkedList<E> {
         return (E) it.getElement();
     }
 
+    // O(N)
+    public Node getNodeByIndex(int index) {
+        Node it = first;
+
+        for(int i = 0; i < index; i++) {
+            it = it.getNext();
+        }
+
+        return it;
+    }
+
     // remove first element - O(1)
     public E remove() {
         if(first != null) {
