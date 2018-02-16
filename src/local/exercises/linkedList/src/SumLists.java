@@ -3,6 +3,7 @@ package local.exercises.linkedList.src;
 import local.algorithms.LinkedList;
 import local.algorithms.Node;
 
+// O(A+B) time, O(N) space
 public class SumLists {
 
     public static LinkedList<Integer> sum(LinkedList<Integer> a, LinkedList<Integer> b) {
