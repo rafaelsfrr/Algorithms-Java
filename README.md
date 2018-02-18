@@ -13,3 +13,4 @@ This is a repository with some algorithms resources like notes and some implemen
 Some exercises from the [Cracking The Code Interview book](http://www.crackingthecodinginterview.com/) and other resources.
 
 + [Strings](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/strings.md)
++ [Linked Lists](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/linked-list.md)
