@@ -2,16 +2,16 @@ package local.algorithms;
 
 public class Stack<E> {
 
-    private static class StackNode<E> {
+    private static class Node<E> {
         private E data;
-        private StackNode<E> next;
+        private Node<E> next;
 
-        public StackNode(E item) {
-            this.data = item;
+        public Node(E data) {
+            this.data = data;
         }
     }
 
-    private StackNode<E> top;
+    private Node<E> top;
     private int size;
 
     // O(1)
@@ -36,8 +36,8 @@ public class Stack<E> {
     }
 
     // O(1)
-    public void push(E item) {
-        StackNode<E> node = new StackNode<>(item);
+    public void push(E data) {
+        Node<E> node = new Node<>(data);
         node.next = top;
         top = node;
         size++;
