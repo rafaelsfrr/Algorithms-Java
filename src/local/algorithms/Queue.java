@@ -33,8 +33,8 @@ public class Queue<E> {
         // Empty queue
         if(isEmpty())
             first = node;
-
-        last.next = node;
+        else
+            last.next = node;
         last = node;
         size++;
     }
@@ -57,5 +57,18 @@ public class Queue<E> {
             return first.data;
 
         return null;
+    }
+
+    public static void main(String[] args) {
+        Queue<String> q = new Queue<>();
+
+        q.add("Casa");
+        q.add("Amarela");
+        q.add("Azul");
+        q.add("Joana");
+
+        while(!q.isEmpty()) {
+            System.out.println(q.remove());
+        }
     }
 }
