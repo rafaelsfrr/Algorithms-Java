@@ -1,6 +1,7 @@
 package local.exercises.stackQueue;
 
 import java.lang.reflect.Array;
+import java.util.EmptyStackException;
 
 public class ArrayStack<E> {
 
@@ -44,7 +45,7 @@ public class ArrayStack<E> {
             return elem;
         }
 
-        return null;
+        throw new EmptyStackException();
     }
 
     // stackLabel: 1 - stack1
