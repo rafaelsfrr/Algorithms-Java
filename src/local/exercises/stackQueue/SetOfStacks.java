@@ -6,7 +6,7 @@ import java.util.Stack;
 
 public class SetOfStacks<E> {
     // set of stacks
-    ArrayList<Stack<E>> set = new ArrayList<>();
+    private ArrayList<Stack<E>> set = new ArrayList<>();
 
     // global stack capacity
     private final int CAPACITY = 4;
