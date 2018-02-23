@@ -36,7 +36,7 @@ public class SetOfStacks<E> {
         if(!set.get(index).isEmpty()) {
             E elem = set.get(index).pop();
             // if the stack is empty, we can decrease the index and remove the stack from the set
-            if(set.get(index).isEmpty() && index > 0) {
+            if(set.get(index).isEmpty()) {
                 set.remove(index);
                 index--;
             }
@@ -45,17 +45,17 @@ public class SetOfStacks<E> {
         throw new EmptyStackException();
     }
 
+    // The index variable dont rollback, so with the popAt method we can have
+    // stacks not filled. This is a space-time tradeoff, because the other option
+    // is sacrifice time to "balanced" the stacks
     public E popAt(int label) {
         // check if exists a stack with the label passed as arg
         if(label <= index) {
             if(!set.get(label).isEmpty()) {
                 E elem = set.get(label).pop();
-                // if the stack is empty, we can decrease the index and remove the stack from the set
-                if(set.get(label).isEmpty() && label > 0) {
-                    set.remove(label);
-                    index--;
-                }
                 return elem;
+            } else {
+                set.remove(label);
             }
         }
         throw new EmptyStackException();
