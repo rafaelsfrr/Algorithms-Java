@@ -1,6 +1,7 @@
 package local.exercises.stackQueue;
 
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class SetOfStacks<E> {
@@ -41,7 +42,7 @@ public class SetOfStacks<E> {
             }
             return elem;
         }
-        return null;
+        throw new EmptyStackException();
     }
 
     public E popAt(int label) {
@@ -57,6 +58,6 @@ public class SetOfStacks<E> {
                 return elem;
             }
         }
-        return null;
+        throw new EmptyStackException();
     }
 }
