@@ -20,7 +20,7 @@ public class SetOfStacks<E> {
     }
 
     public void push(E data) {
-        // the stack is full
+        // the stack is full, we allocate another stack and increment the index control
         if(set.get(index).size() == CAPACITY) {
             index++;
             Stack<E> nStack = new Stack<>();
@@ -34,6 +34,7 @@ public class SetOfStacks<E> {
     public E pop() {
         if(!set.get(index).isEmpty()) {
             E elem = set.get(index).pop();
+            // if the stack is empty, we can decrease the index and remove the stack from the set
             if(set.get(index).isEmpty() && index > 0) {
                 set.remove(index);
                 index--;
@@ -44,9 +45,11 @@ public class SetOfStacks<E> {
     }
 
     public E popAt(int label) {
+        // check if exists a stack with the label passed as arg
         if(label <= index) {
             if(!set.get(label).isEmpty()) {
                 E elem = set.get(label).pop();
+                // if the stack is empty, we can decrease the index and remove the stack from the set
                 if(set.get(label).isEmpty() && label > 0) {
                     set.remove(label);
                     index--;
