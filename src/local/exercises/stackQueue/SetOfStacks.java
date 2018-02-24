@@ -60,4 +60,28 @@ public class SetOfStacks<E> {
         }
         throw new EmptyStackException();
     }
+
+    public E popAtBalanced(int label) {
+        if(label <= index) {
+            if(!set.get(label).isEmpty()) {
+                E elem = set.get(label).pop();
+
+                balancedStacks();
+                return elem;
+            } else {
+                set.remove(label);
+            }
+        }
+
+        throw new EmptyStackException();
+    }
+
+    public void balancedStacks() {
+        for(int i = 0; i < set.size() - 1; i++) {
+            if(set.get(i).size() < CAPACITY &&
+                    !set.get(i + 1).isEmpty()) {
+                set.get(i).push(set.get(i + 1).pop());
+            }
+        }
+    }
 }
