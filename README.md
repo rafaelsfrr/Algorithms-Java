@@ -14,3 +14,4 @@ Some exercises from the [Cracking The Code Interview book](http://www.crackingth
 
 + [Strings](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/strings.md)
 + [Linked Lists](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/linked-list.md)
++ [Stacks and Queues](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/stack-queue.md)
