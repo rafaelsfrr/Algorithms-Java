@@ -1,9 +1,9 @@
 package local.algorithms;
 
 public class Trie {
-    // In this implementation we use a array with the size of the alphabet to storage all the nodes
-    // that have a relation. With this, we can check if a word with lenght K is on the Trie
-    // on O(K) time
+    // In this implementation we use an array with the size of the alphabet to storage
+    // all the nodes that have a relation. With this, we can check if a word with
+    // lenght K is on the Trie on O(K) time
     private final static int ALPHABET_SIZE = 26;
 
     private static class Node {
