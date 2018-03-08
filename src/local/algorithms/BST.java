@@ -1,9 +1,13 @@
 package local.algorithms;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 // integer binary search tree implementation
 public class BST {
     private static class Node {
         private int data;
+        private boolean visited = false;
         private Node right, left;
 
         public Node(int data) {
@@ -99,6 +103,42 @@ public class BST {
                 return current.right;
         }
         return current;
+    }
+
+    public static void dfs(Node current) {
+        if(current != null && !current.visited) {
+            current.visited = true;
+
+            if(current.left != null)
+                dfs(current.left);
+            if(current.right != null)
+                dfs(current.right);
+        }
+    }
+
+    public static void bfs(Node current) {
+        if(current != null) {
+            Queue<Node> queue = new LinkedList<>();
+            queue.add(current);
+
+            while(!queue.isEmpty()) {
+                Node n = queue.remove();
+                n.visited = true;
+
+                if(n.left != null) {
+                    if(!n.left.visited) {
+                        queue.add(n.left);
+                    }
+                }
+
+                if(n.right != null) {
+                    if(!n.right.visited) {
+                        queue.add(n.right);
+                    }
+                }
+            }
+
+        }
     }
 
     public static void visitPreOrder(Node current) {
