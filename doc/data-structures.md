@@ -47,3 +47,43 @@ A Hash Map is a data structure that maps keys to values. In this implementation,
 ### [String Builder](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/StringBuilder.java)
 
 A String Builder is a ArrayList that is used as a container to strings characters, thus creating a dynamically string. With this implementation, we can avoid creating a new string each time we want to append a character.
+
+### [Queue](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/Queue.java)
+
+A Queue is a FIFO(first-in, first-out) data structure.
+
+| Operation | Time bound                               |
+| :-------: | :--------------------------------------: |
+| Insert    |              O(1)                        |
+| Search    |              O(N)                        |
+| Access    |              O(N)                        |
+| Remove    |              O(1)                        |
+
+### [Stack](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/Stack.java)
+
+
+A Stack is a LIFO(last-in, first-out) data structure.
+
+| Operation | Time bound                               |
+| :-------: | :--------------------------------------: |
+| Insert    |              O(1)                        |
+| Search    |              O(N)                        |
+| Access    |              O(N)                        |
+| Remove    |              O(1)                        |
+
+### [Binary Search Tree](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/BST.java)
+
+A Binary Search Tree is a data structure that keeps keys in sorted order. Therefore, every operation on the tree - i.e., search, insert, remove, needs to traverse the tree from root to leaf. In this implementation, the left childs of a parent node have keys that are less or equal than the parent node key and the right childs have keys that are greater than the parent node key.
+
+| Operation | Time bound <sup>[1](#tree_ft)</sup>      |
+| :-------: | :--------------------------------------: |
+| Insert    |              O(log(N)), O(N)             |
+| Search    |              O(log(N)), O(N)             |
+| Access    |              O(log(N)), O(N)             |
+| Remove    |              O(log(N)), O(N)             |
+
+<a name="tree_ft">1</a>: It is O(log(N)) when the tree is balanced.
+
+### [Trie](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/src/local/algorithms/Trie.java)
+
+A Trie is a kind of search tree that all the descendants of a node have a common prefix of the key associated with that node. This structure is usually used to find common prefix. For example, using a trie to store all the english words, you can check if a given word is a valid english word. 
