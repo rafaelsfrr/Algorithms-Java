@@ -20,3 +20,5 @@ Some exercises from the [Cracking The Code Interview book](http://www.crackingth
 + [Linked Lists](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/linked-list.md)
 + [Stacks and Queues](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/stack-queue.md)
 + [Graphs](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/graphs.md)
++ [Bit Manipulation](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/bit.md)
++ [Dynamic Programming](https://github.com/rafaelsfrr/Algorithms-Java/blob/master/doc/dynamic.md)
